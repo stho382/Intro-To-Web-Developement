@@ -1,0 +1,67 @@
+/* override default styles applied to html tags */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* general */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.center_text {
+  text-align: center;
+}
+
+/* index.html */
+.memes_collection {
+  display: grid;
+  justify-items: center;
+  grid-gap: 10px;
+}
+
+.meme {
+  width: 500px;
+}
+
+.meme_desription {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+/* quotes.html */
+
+.person_name {
+  text-align: right;
+  padding-right: 8px;
+}
+
+.quote_card {
+  width: 450px;
+  border: 1.5px solid gainsboro;
+  margin: 8px;
+}
+
+.quotes_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .quote_card {
+    width: 85%;
+  }
+
+  .meme {
+    width: 80vw;
+  }
+}
