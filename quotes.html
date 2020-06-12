@@ -6,27 +6,31 @@
     <title>Memes & Quotes</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="SitePoint" />
-    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+		<link rel="stylesheet" href="css/styles.css?v=1.0" />
+		<script text="text/javascript">
+			function toggleDarkMode() {
+				// change to dark theme if not so already
+				document.body.classList.toggle("dark_theme")
+			}
+		</script>
   </head>
 
   <body>
     <header>
       <nav class="navbar">
-				<a href="index.html">Memes</a>
-				<h1 class="center_text">MemesMetro</h1>
-				<a href="quotes.html">Quotes</a>
-			</nav>
-			<!-- TODO: use JS to toggle dark theme on and off -->
-			<p class="center_text"><button>toggle theme</button></p>
+        <a class="nav_link" href="index.html">Memes</a>
+        <h1 class="center_text">MemesMetro</h1>
+        <a class="nav_link" href="quotes.html">Quotes</a>
+      </nav>
+      <!-- TODO: use JS to toggle dark theme on and off -->
+      <p class="center_text"><button onclick="toggleDarkMode()">toggle theme</button></p>
     </header>
     <section class="quotes_container">
-      <h2>Quotes</h2>
-      <h3>What is a quote?</h3>
+      <h1>Quotes</h2>
+      <h2 class="quote_description">What is a quote?</h3>
       <p>Quote is the repetition of someone else's statement or thoughts</p>
       <section class="quote_card">
         <blockquote>When life gives you lemons you make lemonade</blockquote>
-        <!-- thumbnail goes here -->
-        <!-- <img /> -->
         <p class="person_name">- Jayson Tai</p>
       </section>
 
@@ -35,15 +39,11 @@
           >I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their
           skin, but by the content of their character.</blockquote
         >
-        <!-- thumbnail goes here -->
-        <!-- <img /> -->
         <p class="person_name">- Martin Luther King</p>
       </section>
 
       <section class="quote_card">
         <blockquote>My greatest pain in life is that I will never be able to see myself perform live.</blockquote>
-        <!-- thumbnail goes here -->
-        <!-- <img /> -->
         <p class="person_name">- Kanye West</p>
       </section>
     </section>
