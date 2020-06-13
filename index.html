@@ -5,11 +5,21 @@
 <head>
     <meta charset="utf-8" />
     <title>Memes & Quotes</title>
-    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+    <link rel="stylesheet" href="./css/styles.css"/>
     <script text="text/javascript">
         function toggleDarkMode() {
             // change to dark theme if not so already
             document.body.classList.toggle("dark_theme")
+        }
+
+        function randomiseImage(id, id2){
+            var imagesArray = ["else.png", "oldRogers.jpg", "simpsons.png", "spiderman.png", "why.png", "pepe.jpg", "smart.jpg"]
+            var randomIndex = Math.floor(Math.random() * 7)
+            var randomIndex2 = Math.floor(Math.random() * 7)
+            var image1 = document.getElementById(id)
+            var image2 = document.getElementById(id2)
+            image1.src = "./assets/images/" + imagesArray[randomIndex]
+            image2.src = "./assets/images/" + imagesArray[randomIndex2]
         }
     </script>
 </head>
@@ -31,13 +41,12 @@
                 symbolic meaning representing a particular phenomenon or theme.</p>
             <section class="memes_collection">
                 <figure>
-                    <img class="meme" id="image1" src="./assets/images/pepe.jpg" alt="FeelsBadMan Meme" />
-                    <figcaption>FeelsBadMan</figcaption>
+                    <img class="meme" id="image1" src="./assets/images/pepe.jpg" alt="FeelsBadMan Meme"/>
                 </figure>
                 <figure>
-                    <img class="meme" id="image2" src="./assets/images/smart.jpg" alt="Smart thinking meme" />
-                    <figcaption>Smart thinking meme</figcaption>
+                    <img class="meme" id="image2" src="./assets/images/smart.jpg" alt="Smart thinking meme"/>
                 </figure>
             </section>
+    <p class="center_text"><button onclick="randomiseImage('image1', 'image2')">Randomise</button></p>
 </body>
 </html>
