@@ -1,3 +1,10 @@
+# Introduction To Web Development
+This pre-phase 1 series of videos is designed for people who have little or no experience in HTML, CSS and JavaScript. You will be using these three languages for your phase 1 and phase 2 projects, so it's helpful to learn about it now.
+
+We will be going through the basics of HTML, CSS and JavaScript to develop a simple webpage.
+
+As always, please do not hesitate to reach out if you are stuck or do not understand the content.
+
 - box model (margin, padding, element)
 - element size (px, em, rem, vw, vh)
 - layout (grid and flexbox)
