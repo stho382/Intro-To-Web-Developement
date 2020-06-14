@@ -4,12 +4,20 @@ This pre-phase 1 series of videos is designed for people who have little or no e
 We will be going through the basics of HTML, CSS and JavaScript to develop a simple webpage.
 
 As always, please do not hesitate to reach out if you are stuck or do not understand the content.
-# Videos
-
 
 # Software Requirements
 - Visual Studio Code
 - Internet Browser (Google Chrome, Mozilla Firefox, Microsoft Edge)
+
+# Videos
+### [The video series can be found here](https://www.youtube.com/playlist?list=PLYCDbAy3AHGabJEHn4izbxjPL7dniqHBy)
+
+# XP Challenge
+To further your understanding and encourage self-learning, we have launched the XP Challenge. Prizes such as Xbox One S, Azure Exam Vouchers and Swag Kits will be given out to students who have shown their dedication and passion. [Find out more about it here](https://aka.ms/nzmsawebsite)
+
+# Recommended module for the XP Challenge in MS Learn:
+###  [Build a simple website](https://docs.microsoft.com/en-gb/learn/modules/build-simple-website/)
+
 
 # MemesMetro Webpage Overview
 
@@ -86,26 +94,39 @@ Much of the `quotes.html` page is similar to `index.html` with the exception of
 ```
 - The `<blockquote>` tag specifies that the following content has been quoted from an external source.
 
-
-
-
-
-
-- box model (margin, padding, element)
-- element size (px, em, rem, vw, vh)
-- layout (grid and flexbox)
-	- justify-content, align-items, grid-template-columns (positioning)
-- include good reference
-
 # CSS
+ 
 ## Basic concepts
 
 ### Box model
+![box model illustration](https://media.prod.mdn.mozit.cloud/attachments/2019/03/19/16558/29c6fe062e42a327fb549a081bc56632/box-model.png)
+**Every element** in HTML is a box!!! The model helps us to understand how the width and the height of an element are set out. It goes a long way when you truly understand the box model because you will be in full control of the spacing and the elements of the size. **Padding** is the space between the border and the content, and **margin** is the spacing between the border and the imaginary space surrounding the box. In the **standard box** model, the space taken up by the box is affected by the border and the padding. Whereas in the alternative, **border-box** model, the spacing is taken up the box is strictly independent of the padding and the border. When should we use the standard box or the border-box model? Mozilla says this:
+> It is often useful to set `box-sizing` to `border-box` to layout elements. This makes dealing with the sizes of elements much easier, and generally eliminates several pitfalls you can stumble on while laying out your content. On the other hand, when using `position: relative` or `position: absolute`, use of `box-sizing: content-box` allows the positioning values to be relative to the content, and independent of changes to border and padding sizes, which is sometimes desirable.
 
 ### Layout
+![flexbox in row direction](https://media.prod.mdn.mozit.cloud/attachments/2017/11/02/15614/28c51e9af9a679c112cace1dea8eec71/Basics1.png)
+
+
+**Flexbox** and **grid** are the centrepieces that control the layout of the webpage. Flex and grid are the inner display style that we can set on the box. With flexbox, you can lay elements out horizontally or vertically which depends on the direction of the primary axis which defaults to `row` or horizontal. With grid, it’s like a table, where you divides the box up into cells and where each element can go. You may ask, should I use grid or flexbox? There isn’t a clear-cut answer, because what can be done by grid can also be achieved through flexbox. Though let's make a distinction, flexbox focuses on the control flow, that is the flex item can stretch or shrink. Grid focuses on content placement; for example, a grid is broken into several cells horizontally and vertically. Mozilla puts its opinion on the table:
+
+> If you want the space distribution row by row, use flexbox. If you don’t, use Grid.
+
+Refer [here](https://webdesign.tutsplus.com/articles/flexbox-vs-css-grid-which-should-you-use--cms-30184) for a more comprehensive discussion.
+
 **Positioning**:
+For a flexbox, we use `justify-content` or `align-items` to position flex items. The difference between the 2 attributes is that, `justify-content` controls the items on the primary axis, and `align-items` position the items along the cross axis. This [CSS Tricks post](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) gives a comprehensive flexbox cookbook.
 
 ### Size
+Each box/element has the attribute of `width` and `height`. That is how we control the size of the element. However, how do we evaluate such size? If I ask how tall you, you may answer 5 Feet 11 Inches. In the CSS world, people use units like pixel (`px`), `em` and `rem` along with a numeric value to describe the size. For example, an element is `300px` wide and `150px` high. `px`  is the basic unit size. `rem` is dependent on the **root** `html` element. Normally, the default font-size of html is `16px` though it varies from browser to browser. That means `1 rem` is `16px`, `1.5 rem` is `24px`, etc. `em` depends on the size of the parent element. For example, consider the following code:
+```html
+<div style="font-size: 20px;">
+  <p style="font-size: 1.25em">Some em text</p>
+</div>
+```
+The `<p>` tag is the child of the parent `<div>` tag. Therefore, the `<p>` tag will have a font-size of `1.25 * 20 = 25px`. Here is the general formula for calculating the `em` size:
+> em = desired element pixel value / parent element font-size in pixels
+
+[Here](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) is a more detailed description on font-size from Mozilla.
 
 ## How to use CSS
 CSS is a langauage that styles the HTML page. In the presentation, we included CSS in `index.html` and `quotes.html` using the `<link>` tag to reference the `styles.css`file (**linked css**). Then we apply styles to our elements using class selectors like so:
@@ -124,8 +145,8 @@ Normally, this is considered **bad practice** in HTML and CSS because it hinders
     <style>
       .big_center_text {
         text-align: center;
-	    font-size: 36px;
-	  }
+        font-size: 36px;
+      }
     </style>
   <head>
   <body>
@@ -133,7 +154,7 @@ Normally, this is considered **bad practice** in HTML and CSS because it hinders
   </body>
 </html>
 ```
-The above 2 examples produce the same result, that is, to center the paragraph, and change its `font-size` to `36px`. This is better than inline styles, but writing CSS in a `.css` file offers the best readability. See more ways to include CSS in HTML [here](https://ryanstutorials.net/css-tutorial/css-including.php).
+The above 2 examples produce the same result, that is, to center the paragraph, and change its `font-size` to `36px`. This is better than inline styles, but writing CSS in a `.css` file offers the best readability. See more ways to include CSS in HTML [here](https://ryanstutorials.net/css-tutorial/css-including.php).  
 
 # JavaScript
 JavaScript is a high level programming and scripting language that allows you to implement complex features on web pages.
