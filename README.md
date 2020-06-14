@@ -4,12 +4,20 @@ This pre-phase 1 series of videos is designed for people who have little or no e
 We will be going through the basics of HTML, CSS and JavaScript to develop a simple webpage.
 
 As always, please do not hesitate to reach out if you are stuck or do not understand the content.
-# Videos
-
 
 # Software Requirements
 - Visual Studio Code
 - Internet Browser (Google Chrome, Mozilla Firefox, Microsoft Edge)
+
+# Videos
+### [The video series can be found here](https://www.youtube.com/playlist?list=PLYCDbAy3AHGabJEHn4izbxjPL7dniqHBy)
+
+# XP Challenge
+To further your understanding and encourage self-learning, we have launched the XP Challenge. Prizes such as Xbox One S, Azure Exam Vouchers and Swag Kits will be given out to students who have shown their dedication and passion. [Find out more about it here](https://aka.ms/nzmsawebsite)
+
+# Recommended module for the XP Challenge in MS Learn:
+###  [Build a simple website](https://docs.microsoft.com/en-gb/learn/modules/build-simple-website/)
+
 
 # MemesMetro Webpage Overview
 
